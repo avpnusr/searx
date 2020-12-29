@@ -26,5 +26,5 @@ jobs:
         run: |
           BDATE=$(date +%d-%m-%Y) && docker buildx build --push \
           --tag avpnusr/searx:latest --tag avpnusr/searx:$BDATE \
-            --platform linux/amd64,linux/arm/v7,linux/arm/v6,linux/arm64 \
+            --platform linux/amd64,linux/arm/v7,linux/arm/v6,linux/arm64,linux/ppc64le \
             --file ./Dockerfile .
